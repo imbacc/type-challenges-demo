@@ -19,7 +19,7 @@
 /* _____________ 你的代码 _____________ */
 
 type filter_DTYPE = ' ' | '\n' | '\t'
-type TrimLeft<S extends string> = S extends `${filter_DTYPE}${infer Rest}` ? TrimLeft<Rest> : S
+type TrimLeft<S extends string> = S extends `${filter_DTYPE}${infer R}` ? TrimLeft<R> : S
 
 /* _____________ 测试用例 _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
